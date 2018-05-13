@@ -21,9 +21,9 @@ Node InsertNth(Node head, int data, int position) {
     int index = 0;
     Node tracker = head;
 
-    // No asumimos que la posición que nos dan nunca será mayor
-    // que el número de elementos en la lista + 1. Si es así, añadiríamos
-    // el elemento al final de la lista.
+    // We don't assume that the position that we are given will ever be greater
+    // than the number of elements in the list + 1. If so, we would need to add
+    // the element at the end of the list.
     while (tracker.next != null && index != position - 1) {
       tracker = tracker.next;
       index++;

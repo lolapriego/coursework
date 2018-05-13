@@ -12,8 +12,7 @@ public class Solution {
     }
 
     /**
-    * Este mêtodo construye un mapa con la colección de Strings y las veces que aparece
-    * cada una
+    * This method construcs a map with the collection of Strings and occurrence.
     */
     private static Map<String, Integer> buildCollectionOfStrings(Scanner scanner, int n) {
         final Map<String, Integer> map = new HashMap<String, Integer>();
@@ -30,7 +29,7 @@ public class Solution {
 
     private static void printOcurrenceOfQueries(Scanner scanner, int numberQueries, Map<String, Integer> mapWords) {
         for (int i = 0; i < numberQueries; i++) {
-          // por cada query, buscamos cuántas veces ha aparecido e imprimimos por pantalla el valor.
+          // for each query, we look for how many times it occurs and we print on screen the value.
             final String line = scanner.nextLine();
             if (mapWords.containsKey(line)) {
                 System.out.println(mapWords.get(line));

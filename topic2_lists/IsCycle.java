@@ -8,9 +8,12 @@ A Node is defined as:
     }
 */
 /**
-* Como la lista es menor de 100 items, nos podemos permitir guardar referencia a cada uno de los nodos.
-* Si volvemos a ver esa referencia (ese nodo) mientras que iteramos sobre la lista, significa que hay un ciclo.
+* The list has less than 100 items. Therefore, we can keep the reference to each
+* of the nodes - as it will not be memory expensive.
+* If we see that reference (that node) while we iterate over the list,
+* it means that there is a cycle.
 */
+public class Solution {
 boolean hasCycle(Node head) {
     if (head == null) {
         return false;
@@ -27,9 +30,10 @@ boolean hasCycle(Node head) {
 }
 
 /**
-* Otra opción sería mover dos punteros. Uno al doble de velocidad. Si hay
-* algún ciclo, éste nunca terminaría sino que se llegaría a encontrar con el
-* primero. Esta idea es mucho mas creativa */
+* Another option would be to move two pointers. One should be twice faster.
+* If there are any cycles, this should never end, but it will meet the other
+* pointer. This idea is much more creative.
+**/
 boolean hasCycleOption2(Node head) {
   if (head == null) {
       return false;
@@ -46,4 +50,5 @@ boolean hasCycleOption2(Node head) {
       trackerSlow = trackerSlow.next;
   }
   return trackerFast == trackerSlow;
+}
 }

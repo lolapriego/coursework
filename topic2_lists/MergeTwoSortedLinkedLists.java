@@ -9,13 +9,14 @@
 */
 
 /**
-* Hay dos formas de hacerlo que se me vengan a la cabeza.
-* 1) involucra iterar sobre una de las listas insertando los nodos de la otra lista
-* cuando sean menores.
-* 2) consiste en tener una referencia a la cola de la nueva lista y un puntero por cada
-* lista. Siempre insertaremos el nodo del puntero que sea menor.
-* Vamos a resolverlo como el n.2, ya que las dos son iguales en tiempo y memoria, pero
-* la segunda es mas sencilla.
+* There are two ways of coding this:
+* 1) Involves iterating over the lists inserting the nodes of the other lista
+* when these are smaller.
+* 2) Keep a reference to the tail of the new list and a pointer for each list.
+* We would always insert the node of the pointer that is pointing to the smaller
+* value.
+* Let's solve it as approach n.2 as both solutions have the same big-Oh in time
+* and memory, but n.2 is simpler to implement.
 */
 Node mergeLists(Node headA, Node headB) {
     Node newHead = null;
