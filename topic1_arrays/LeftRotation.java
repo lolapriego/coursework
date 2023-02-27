@@ -7,8 +7,8 @@ import java.util.regex.*;
 public class Solution {
 
     static int[] leftRotation(int[] a, int d) {
-        // They say in requirements that these inputs should not be considered.
-        // However, noting that we should prevent against those.
+        // They say in the requirements that these inputs should not be considered;
+        // however, were are handling it for consistency sake.
         if (d == 0 || a.length == 0) {
             return a;
         }
@@ -28,9 +28,9 @@ public class Solution {
     }
 
     /**
-    * Takes care of the case where the rotation index. You have to take into account
-    * how it is rotated towards the left. To compute index of B, we rotate towards the right.
-    * If we were to do a[i] in the loop, then these method would need to be slightly chnaged
+    * Takes care of the index rotation. You have to take into account
+    * how it is rotated towards the left: To compute index of B, we rotate towards the right.
+    * If we were to do a[i] in the loop, then these method would need to be slightly changed
     * to compute index of b.
     */
     private static int indexHelper(int index, int length) {
